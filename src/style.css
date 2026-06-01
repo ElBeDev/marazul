@@ -1212,6 +1212,8 @@ button { cursor: pointer; }
 /* ================================================================
    RESPONSIVE
    ================================================================ */
+
+/* ── Tablet ── */
 @media (max-width: 1024px) {
   .hero { grid-template-columns: 1fr; padding-top: 120px; }
   .hero-visual { display: none; }
@@ -1232,32 +1234,125 @@ button { cursor: pointer; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
 
+/* ── Mobile ── */
 @media (max-width: 768px) {
+  /* NAV */
   .nav-left, .nav-right { display: none; }
   .nav-inner { grid-template-columns: auto 1fr; }
   .nav-logo { justify-content: flex-start; }
+  .nav-logo img { height: 44px; }
   .hamburger { display: flex; }
 
-  .benefits-list { grid-template-columns: 1fr 1fr; }
+  /* HERO */
+  .hero-content { padding-bottom: 120px; }
+  .hero-dots { display: none; }
+  .hero-strip {
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 14px 0;
+  }
+  .hero-stat {
+    width: 50%;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .hero-stat:nth-child(n+5) { border-bottom: none; }
+  .hero-strip-line { display: none; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-hero-ghost { width: 100%; max-width: 320px; justify-content: center; }
 
+  /* BENEFITS */
+  .benefits-list { grid-template-columns: 1fr 1fr; }
+  .benefit-card { padding: 28px 20px; }
+
+  /* BENEFIT ROW */
   .benefit-row { grid-template-columns: 40px 1fr 28px; }
   .benefit-row:hover { margin: 0; padding: 32px 0; background: transparent; }
 
+  /* STATS */
+  .stats-band { padding: 40px var(--pad); }
   .stats-inner { gap: 0; }
   .stat-line { display: none; }
-  .stat-item { width: 50%; padding: 16px; }
+  .stat-item { width: 50%; padding: 16px 12px; }
 
-  .cta-full { height: 520px; }
+  /* HIW */
+  .hiw-header { margin-bottom: 48px; }
+  .hiw-step { padding-right: 0; }
 
-  .footer-inner { grid-template-columns: 1fr; }
+  /* RESORT WEEKS */
+  .rw-tabs { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .rw-tab { padding: 14px 20px; white-space: nowrap; }
+  .rw-panel-info { padding: 28px 20px; }
 
+  /* TESTIMONIALS */
+  .quote-nav { margin-top: 32px; }
+
+  /* CTA */
+  .cta-full { height: 480px; }
+  .cta-text h2 { font-size: clamp(2rem, 6vw, 3rem); }
+
+  /* FAQ */
+  .faq-grid { gap: 36px; }
+
+  /* CONTACT FORM */
   .form-row { grid-template-columns: 1fr; }
+
+  /* FOOTER */
+  .footer-inner { grid-template-columns: 1fr; gap: 36px; }
+  .footer-brand { margin-bottom: 8px; }
 }
 
+/* ── Small mobile ── */
 @media (max-width: 480px) {
-  .hero-title { font-size: 3.2rem; }
-  .hero-actions { flex-direction: column; }
-  .btn-submit { width: 100%; text-align: center; }
-  .rw-tabs { overflow-x: auto; }
+  html { font-size: 15px; }
+
+  /* HERO */
+  .hero-title { font-size: clamp(2.6rem, 11vw, 3.4rem); }
+  .hero-sub { font-size: 0.97rem; }
+  .hero-eyebrow { font-size: 0.7rem; }
+  .hero-content { padding-bottom: 140px; }
+  .hero-stat strong { font-size: 1.3rem; }
+
+  /* BENEFITS */
   .benefits-list { grid-template-columns: 1fr; }
+  .benefit-card { padding: 28px 24px; }
+
+  /* STATS */
+  .stat-item strong { font-size: 2.2rem; }
+  .stat-item { width: 50%; }
+
+  /* HEADINGS */
+  .hiw-header h2,
+  .rw-header h2,
+  .faq-left h2 { font-size: clamp(2rem, 9vw, 2.8rem); }
+  .benefits-header h2 { font-size: clamp(2rem, 9vw, 2.8rem); }
+
+  /* HIW */
+  .hiw-step-num { width: 32px; height: 32px; font-size: 0.7rem; }
+  .hiw-step h3 { font-size: 1.25rem; }
+
+  /* BUTTONS */
+  .btn-submit { width: 100%; text-align: center; }
+  .btn-primary { padding: 14px 26px; font-size: 0.85rem; }
+
+  /* RESORT WEEKS */
+  .rw-tabs { overflow-x: auto; }
+  .rw-tab { padding: 12px 16px; font-size: 0.75rem; }
+
+  /* CTA */
+  .cta-full { height: 420px; }
+  .cta-text h2 { font-size: clamp(1.8rem, 7vw, 2.4rem); }
+  .cta-text p { font-size: 0.92rem; }
+
+  /* TESTIMONIALS */
+  .quote-slide p { font-size: 1.2rem; }
+  .bigquote-mark { font-size: 6rem; }
+
+  /* FOOTER */
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  .footer { padding: 48px 0 0; }
+
+  /* CONTACT */
+  .contact-info-item { flex-direction: column; gap: 8px; }
 }

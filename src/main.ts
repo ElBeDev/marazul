@@ -254,6 +254,7 @@ gsap.from('.benefits-sub', {
 document.querySelectorAll<HTMLElement>('.count-num').forEach((el) => {
   const target = parseFloat(el.dataset['target'] ?? '0')
   const suffix = el.dataset['suffix'] ?? ''
+  const prefix = el.dataset['prefix'] ?? ''
 
   const formatNum = (val: number): string => {
     if (target >= 100000) return (val / 1000).toFixed(0) + 'K'
@@ -271,7 +272,7 @@ document.querySelectorAll<HTMLElement>('.count-num').forEach((el) => {
         duration: 2.2,
         ease: 'power2.out',
         onUpdate() {
-          el.textContent = formatNum(obj.val) + suffix
+          el.textContent = prefix + formatNum(obj.val) + suffix
         },
       })
     },

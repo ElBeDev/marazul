@@ -7,8 +7,11 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       input: {
-        main:       resolve(__dirname, 'index.html'),
-        membership: resolve(__dirname, 'membership.html'),
+        main:        resolve(__dirname, 'index.html'),
+        rooms:       resolve(__dirname, 'rooms.html'),
+        marina:      resolve(__dirname, 'marina.html'),
+        activities:  resolve(__dirname, 'activities.html'),
+        membership:  resolve(__dirname, 'membership.html'),
       },
     },
   },

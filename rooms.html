@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rooms &amp; Suites — Marazul Resort · Cancún</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <nav class="nav-left" aria-label="Primary left">
+        <a href="/">Home</a>
+        <a href="rooms.html" class="nav-active">Rooms</a>
+        <a href="marina.html">Marina</a>
+        <a href="activities.html">Activities</a>
+      </nav>
+      <a href="/" class="nav-logo" aria-label="Marazul home">
+        <img src="/assets/logo.png" alt="Marazul Resort &amp; Marina" />
+      </a>
+      <nav class="nav-right" aria-label="Primary right">
+        <a href="membership.html">Membership</a>
+        <a href="#contact">Contact</a>
+        <a href="membership.html" class="nav-cta">Explore →</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="/" class="m-link" data-close>Home</a>
+      <a href="rooms.html" class="m-link" data-close>Rooms</a>
+      <a href="marina.html" class="m-link" data-close>Marina</a>
+      <a href="activities.html" class="m-link" data-close>Activities</a>
+      <a href="membership.html" class="m-link" data-close>Membership</a>
+      <a href="#contact" class="m-link" data-close>Contact</a>
+      <div class="m-divider"></div>
+      <a href="membership.html" class="m-cta">Explore Membership →</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-img">
+      <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1800&q=85" alt="" aria-hidden="true" loading="eager" fetchpriority="high" />
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="hero-eyebrow">Marazul Resort &nbsp;·&nbsp; Cancún</span>
+      <h1 class="hero-title">Rooms &amp;<br/><em>Suites.</em></h1>
+      <p class="hero-sub">Waterfront accommodations designed around the view — lagoon breezes, Caribbean light, and everything you need to feel at home on the water.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Inquire &amp; Book</a>
+        <a href="/" class="btn-hero-ghost">← Back to Resort</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOMS -->
+  <section class="rooms" id="rooms">
+    <div class="wrap">
+      <div class="rooms-hd">
+        <p class="label">Accommodations</p>
+        <h2 class="reveal-heading">Sleep closer<br/>to the water.</h2>
+        <p class="rooms-sub">Every room at Marazul is positioned to make the most of the Cancún landscape — lagoon views, sea breezes, and the sound of water just outside your door.</p>
+      </div>
+      <div class="rooms-grid">
+        <article class="room-card">
+          <div class="room-img">
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900&q=80" alt="Lagoon Room" loading="lazy" />
+          </div>
+          <div class="room-body">
+            <span class="room-type">Standard</span>
+            <h3>Lagoon Room</h3>
+            <p>Comfortable, well-appointed rooms with private balcony overlooking the lagoon. King or twin beds, AC, flat screen, and direct access to resort amenities.</p>
+            <ul class="room-features">
+              <li>Private balcony · Lagoon view</li>
+              <li>King or twin beds</li>
+              <li>Air conditioning · Smart TV</li>
+              <li>Resort pool &amp; amenity access</li>
+            </ul>
+            <a href="#contact" class="room-cta">Inquire about this room →</a>
+          </div>
+        </article>
+        <article class="room-card room-card--featured">
+          <div class="room-img">
+            <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=900&q=80" alt="Ocean Suite" loading="lazy" />
+          </div>
+          <div class="room-body">
+            <span class="room-type">Suite</span>
+            <h3>Ocean Suite</h3>
+            <p>Spacious suites with separate living area, premium furnishings, and panoramic views of the Caribbean. Ideal for couples seeking a luxury getaway.</p>
+            <ul class="room-features">
+              <li>Panoramic ocean &amp; lagoon view</li>
+              <li>Separate living area · King bed</li>
+              <li>Jacuzzi · Premium bath amenities</li>
+              <li>Personalized service</li>
+            </ul>
+            <a href="#contact" class="room-cta">Inquire about this suite →</a>
+          </div>
+        </article>
+        <article class="room-card">
+          <div class="room-img">
+            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=900&q=80" alt="Marina View Room" loading="lazy" />
+          </div>
+          <div class="room-body">
+            <span class="room-type">Premium</span>
+            <h3>Marina View Room</h3>
+            <p>Wake up to boats on the water. These rooms overlook the marina directly — ideal for boat owners or anyone who lives for the sea.</p>
+            <ul class="room-features">
+              <li>Direct marina views</li>
+              <li>Private terrace · King bed</li>
+              <li>Air conditioning · Smart TV</li>
+              <li>Priority marina access</li>
+            </ul>
+            <a href="#contact" class="room-cta">Inquire about this room →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <img src="/assets/logo.png" alt="Marazul Group" class="contact-logo" />
+        <p class="contact-tagline">Resort &amp; Marina &nbsp;·&nbsp; Cancún, Q.R.</p>
+        <div class="contact-details">
+          <div class="cdetail"><span class="cdetail-label">Location</span><span>Carr. a Punta Sam<br/>Supermanzana 86, Manzana 53<br/>Cancún, Quintana Roo</span></div>
+          <div class="cdetail"><span class="cdetail-label">Phone</span><a href="tel:+529982007066">+52 998 200 7066</a></div>
+          <div class="cdetail"><span class="cdetail-label">Email</span><a href="mailto:marazulgroup2020@gmail.com">marazulgroup2020@gmail.com</a></div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <h3>Book a room</h3>
+        <div class="form-row">
+          <div class="field"><label for="fname">Name</label><input type="text" id="fname" name="name" autocomplete="name" placeholder="Your full name" required /></div>
+          <div class="field"><label for="femail">Email</label><input type="email" id="femail" name="email" autocomplete="email" placeholder="you@email.com" required /></div>
+        </div>
+        <div class="field"><label for="fphone">Phone</label><input type="tel" id="fphone" name="phone" autocomplete="tel" placeholder="+1 000 000 0000" /></div>
+        <div class="field"><label for="fmessage">Message</label><textarea id="fmessage" name="message" rows="4" placeholder="Which room interests you? Preferred dates?"></textarea></div>
+        <button type="submit" class="btn-submit" id="submitBtn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="/assets/logo.png" alt="Marazul Group" />
+        <p>Resort &amp; Marina<br/>Cancún, Quintana Roo · México</p>
+      </div>
+      <div class="footer-col">
+        <h4>Resort</h4>
+        <a href="rooms.html">Rooms &amp; Suites</a>
+        <a href="marina.html">Marina SEFA</a>
+        <a href="activities.html">Activities</a>
+        <a href="/">Home</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:marazulgroup2020@gmail.com">marazulgroup2020@gmail.com</a>
+        <a href="tel:+529982007066">+52 998 200 7066</a>
+        <span>Carr. a Punta Sam, SM 86, Cancún</span>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="membership.html">Travel Membership</a>
+        <a href="https://members.vacancyrewards.com/" target="_blank" rel="noopener">Member Login</a>
+        <a href="#contact">Get in Touch</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Marazul Group. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

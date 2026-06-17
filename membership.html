@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marazul — Travel &amp; Discount Membership · Cancún</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <nav class="nav-left" aria-label="Primary left">
+        <a href="/">← Resort</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#weeks">Resort Weeks</a>
+      </nav>
+
+      <a href="/" class="nav-logo" aria-label="Marazul home">
+        <img src="/assets/logo.png" alt="Marazul Group" />
+      </a>
+
+      <nav class="nav-right" aria-label="Primary right">
+        <a href="#memberships">Plans</a>
+        <a href="#contact">Contact</a>
+        <a href="https://members.vacancyrewards.com/" target="_blank" rel="noopener" class="nav-cta">Login →</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="/" class="m-link" data-close>← Resort</a>
+      <a href="#benefits" class="m-link" data-close>Benefits</a>
+      <a href="#weeks" class="m-link" data-close>Resort Weeks</a>
+      <a href="#memberships" class="m-link" data-close>Plans</a>
+      <a href="#faq" class="m-link" data-close>FAQ</a>
+      <a href="#contact" class="m-link" data-close>Contact</a>
+      <div class="m-divider"></div>
+      <a href="https://members.vacancyrewards.com/" target="_blank" rel="noopener" class="m-cta">Member Login →</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" id="heroSlides">
+      <div class="hero-slide active">
+        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1800&q=85" alt="" aria-hidden="true" loading="eager" fetchpriority="high" />
+      </div>
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1800&q=80" alt="" aria-hidden="true" loading="lazy" />
+      </div>
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1800&q=80" alt="" aria-hidden="true" loading="lazy" />
+      </div>
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1800&q=80" alt="" aria-hidden="true" loading="lazy" />
+      </div>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Travel &amp; Discount Membership &nbsp;·&nbsp; 70+ Countries</span>
+      <h1 class="hero-title">Travel Smarter.<br/><em>Save More.</em></h1>
+      <p class="hero-sub">Up to 70% off on 1 million+ hotels, resort weeks, flights, cruises, car rentals, tours, and vacation packages — all in one membership that pays for itself on your very first trip.</p>
+      <div class="hero-actions">
+        <a href="#memberships" class="btn-primary">See Membership Plans</a>
+        <a href="https://members.vacancyrewards.com/" target="_blank" rel="noopener" class="btn-hero-ghost">Member Login</a>
+      </div>
+    </div>
+    <div class="hero-strip">
+      <div class="hero-stat"><strong>1M+</strong><span>Hotels Worldwide</span></div>
+      <div class="hero-strip-line" aria-hidden="true"></div>
+      <div class="hero-stat"><strong>150K+</strong><span>Resort Weeks</span></div>
+      <div class="hero-strip-line" aria-hidden="true"></div>
+      <div class="hero-stat"><strong>70%</strong><span>Max Savings</span></div>
+      <div class="hero-strip-line" aria-hidden="true"></div>
+      <div class="hero-stat"><strong>50K+</strong><span>Members</span></div>
+    </div>
+    <div class="hero-dots" id="heroDots" aria-label="Destination carousel">
+      <button class="hero-dot active" data-slide="0" aria-label="Destination 1"></button>
+      <button class="hero-dot" data-slide="1" aria-label="Destination 2"></button>
+      <button class="hero-dot" data-slide="2" aria-label="Destination 3"></button>
+      <button class="hero-dot" data-slide="3" aria-label="Destination 4"></button>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-band" aria-hidden="true">
+    <div class="marquee-track" id="marqueeTrack">
+      <span>JW Marriott</span><span class="sep">·</span>
+      <span>Four Seasons</span><span class="sep">·</span>
+      <span>Fairmont</span><span class="sep">·</span>
+      <span>Hilton</span><span class="sep">·</span>
+      <span>Sheraton</span><span class="sep">·</span>
+      <span>Radisson</span><span class="sep">·</span>
+      <span>Conrad Hotels</span><span class="sep">·</span>
+      <span>The Leading Hotels</span><span class="sep">·</span>
+      <span>Marriott</span><span class="sep">·</span>
+      <span>Baglioni</span><span class="sep">·</span>
+      <span>JW Marriott</span><span class="sep">·</span>
+      <span>Four Seasons</span><span class="sep">·</span>
+      <span>Fairmont</span><span class="sep">·</span>
+      <span>Hilton</span><span class="sep">·</span>
+      <span>Sheraton</span><span class="sep">·</span>
+      <span>Radisson</span><span class="sep">·</span>
+      <span>Conrad Hotels</span><span class="sep">·</span>
+      <span>The Leading Hotels</span><span class="sep">·</span>
+      <span>Marriott</span><span class="sep">·</span>
+      <span>Baglioni</span><span class="sep">·</span>
+    </div>
+  </div>
+
+  <!-- BENEFITS -->
+  <section class="benefits" id="benefits">
+    <div class="wrap">
+      <div class="benefits-header">
+        <p class="label">Membership Benefits</p>
+        <h2 class="reveal-heading">Everything<br/>you need<br/>to travel.</h2>
+        <p class="benefits-sub">One membership. One platform. Real-time access to timeshare weeks in 70+ countries, plus exclusive rates on over 1 million hotels, flights, cruises, tours, and more.</p>
+      </div>
+      <ul class="benefits-list" aria-label="Membership benefits">
+        <li class="benefit-card">
+          <span class="b-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 42V18l18-10 18 10v24H6z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><rect x="18" y="28" width="12" height="14" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="10" y="22" width="8" height="7" rx="1" stroke="currentColor" stroke-width="2"/><rect x="30" y="22" width="8" height="7" rx="1" stroke="currentColor" stroke-width="2"/></svg>
+          </span>
+          <h3>Hotels &amp; Resorts</h3>
+          <p>Access 1 million+ hotels worldwide — from boutique accommodations to globally recognized brands — all with member-only pricing and a Price Match Guarantee.</p>
+        </li>
+        <li class="benefit-card">
+          <span class="b-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 32l5-10 5 4 10-9 5 3.5-9 10 4.5 3.5L15 42 6 32z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M33 8l6 3-3 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="6" y1="42" x2="42" y2="42" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Discounted Flights</h3>
+          <p>Connect globally with 200+ airlines including low-cost carriers. Member fares to every destination on your bucket list, worldwide.</p>
+        </li>
+        <li class="benefit-card">
+          <span class="b-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 30c4-5 9-8 16-8s12 3 16 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="10" y="20" width="28" height="13" rx="3" stroke="currentColor" stroke-width="2.2"/><rect x="17" y="13" width="14" height="7" rx="2" stroke="currentColor" stroke-width="2"/><circle cx="15" cy="37" r="3" stroke="currentColor" stroke-width="2"/><circle cx="33" cy="37" r="3" stroke="currentColor" stroke-width="2"/></svg>
+          </span>
+          <h3>Cruises</h3>
+          <p>Explore the seven seas at member rates. Preferential access and competitive cruise prices that make ocean travel more affordable for everyone.</p>
+        </li>
+        <li class="benefit-card">
+          <span class="b-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="24" cy="24" r="17" stroke="currentColor" stroke-width="2.2"/><path d="M24 7v34M7 24h34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12.5 12.5c3.5 4 5.5 7.5 11.5 11.5s8 7.5 11.5 11.5M35.5 12.5c-3.5 4-5.5 7.5-11.5 11.5s-8 7.5-11.5 11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Tours &amp; Activities</h3>
+          <p>Discover local experiences, theme parks, guided tours, and entertainment tickets — curated for people who travel for the experience.</p>
+        </li>
+        <li class="benefit-card">
+          <span class="b-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="4" y="18" width="40" height="18" rx="4" stroke="currentColor" stroke-width="2.2"/><circle cx="14" cy="36" r="4" stroke="currentColor" stroke-width="2.2"/><circle cx="34" cy="36" r="4" stroke="currentColor" stroke-width="2.2"/><path d="M18 36h12M4 26h40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M29 18v-4a5 5 0 0 0-10 0v4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Car Rentals</h3>
+          <p>30,000 pick-up locations worldwide — on and off airport premises, including all major airports. Drive anywhere, anytime.</p>
+        </li>
+        <li class="benefit-card">
+          <span class="b-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="8" y="18" width="32" height="22" rx="3" stroke="currentColor" stroke-width="2.2"/><path d="M16 18v-4a8 8 0 0 1 16 0v4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><line x1="8" y1="28" x2="40" y2="28" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="35" r="3" stroke="currentColor" stroke-width="2"/></svg>
+          </span>
+          <h3>Multi-City Packages</h3>
+          <p>Explore multiple cities in one booking — hotels, airfare, transfers, and curated activities all covered. 200,000+ destinations available.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-band">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <strong class="count-num" data-target="1000000" data-suffix="+" aria-label="Over 1 million hotels">0</strong>
+        <span>Hotels Worldwide</span>
+      </div>
+      <div class="stat-line" aria-hidden="true"></div>
+      <div class="stat-item">
+        <strong class="count-num" data-target="150000" data-suffix="+" aria-label="150 thousand resort weeks">0</strong>
+        <span>Resort Weeks</span>
+      </div>
+      <div class="stat-line" aria-hidden="true"></div>
+      <div class="stat-item">
+        <strong class="count-num" data-target="700" data-prefix="$" data-suffix="+" aria-label="$700 avg savings">0</strong>
+        <span>Avg. Savings / Stay</span>
+      </div>
+      <div class="stat-line" aria-hidden="true"></div>
+      <div class="stat-item">
+        <strong class="count-num" data-target="50000" data-suffix="+" aria-label="50 thousand members">0</strong>
+        <span>Members Worldwide</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="hiw" id="how-it-works">
+    <div class="wrap">
+      <div class="hiw-header">
+        <p class="label">Getting Started</p>
+        <h2 class="reveal-heading">Ready in<br/>three steps.</h2>
+      </div>
+      <div class="hiw-steps">
+        <div class="hiw-step">
+          <span class="hiw-step-num">01</span>
+          <h3>Become a Member</h3>
+          <p>Join Marazul and receive a welcome call from a dedicated travel specialist within 15 business days. We'll walk you through everything step by step.</p>
+        </div>
+        <div class="hiw-connector" aria-hidden="true"></div>
+        <div class="hiw-step">
+          <span class="hiw-step-num">02</span>
+          <h3>Access Your Portal</h3>
+          <p>Log in to your private member platform. Browse exclusive rates on hotels, resort weeks, flights, cruises, car rentals, and multi-city packages across 70+ countries.</p>
+        </div>
+        <div class="hiw-connector" aria-hidden="true"></div>
+        <div class="hiw-step">
+          <span class="hiw-step-num">03</span>
+          <h3>Save Up to 70%</h3>
+          <p>Book at member-only prices and save an average of $700+ per stay. Our team is available 24/7 for emergencies and support throughout your trip.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERSHIP PLANS -->
+  <section class="memberships" id="memberships">
+    <div class="wrap">
+      <div class="memberships-hd">
+        <p class="label">Membership Plans</p>
+        <h2 class="reveal-heading">Choose your<br/>plan.</h2>
+        <p class="memberships-sub">Unlock hotels, resort weeks, flights, cruises, car rentals, tours, and multi-city packages — all through one seamless platform. Contact us to find the right plan for you.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <p class="pricing-tier">Explorer</p>
+          <div class="pricing-price"><span>Contact Us</span><small>&nbsp;</small></div>
+          <p class="pricing-desc">Perfect for couples and solo travelers ready to explore the world at unbeatable prices.</p>
+          <ul class="pricing-list">
+            <li>1M+ hotels at member rates</li>
+            <li>Last Minute Resort Weeks $399</li>
+            <li>Discounted flights (200+ airlines)</li>
+            <li>24/7 travel support</li>
+          </ul>
+          <a href="#contact" class="btn-primary btn--outline">Commence Now</a>
+        </div>
+        <div class="pricing-card pricing-card--featured">
+          <span class="pricing-badge">Most Popular</span>
+          <p class="pricing-tier">Voyager</p>
+          <div class="pricing-price"><span>Contact Us</span><small>&nbsp;</small></div>
+          <p class="pricing-desc">For families and frequent travelers who want every benefit of the platform.</p>
+          <ul class="pricing-list">
+            <li>Everything in Explorer</li>
+            <li>Smart &amp; VIP Resort Weeks</li>
+            <li>Cruises + car rentals (30K locations)</li>
+            <li>Tours, activities &amp; packages</li>
+          </ul>
+          <a href="#contact" class="btn--featured">Commence Now</a>
+        </div>
+        <div class="pricing-card">
+          <p class="pricing-tier">Elite</p>
+          <div class="pricing-price"><span>Contact Us</span><small>&nbsp;</small></div>
+          <p class="pricing-desc">The full platform unlocked — plus My Deals App, multi-city packages, and a dedicated travel advisor.</p>
+          <ul class="pricing-list">
+            <li>Everything in Voyager</li>
+            <li>My Deals App (save up to 33%)</li>
+            <li>Multi-city package deals</li>
+            <li>Dedicated personal travel advisor</li>
+          </ul>
+          <a href="#contact" class="btn-primary btn--outline">Commence Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESORT WEEKS -->
+  <section class="rw" id="weeks">
+    <div class="wrap">
+      <div class="rw-header">
+        <p class="label label--light">Resort Weeks</p>
+        <h2 class="reveal-heading">A whole week<br/>all to yourself.</h2>
+        <p class="rw-sub">Fully equipped resort accommodations for 7 unforgettable nights. Perfect for families, couples, or a well-deserved solo escape.</p>
+      </div>
+      <div class="rw-tabs" role="tablist">
+        <button class="rw-tab active" role="tab" aria-selected="true" data-tab="lastminute">Last Minute</button>
+        <button class="rw-tab" role="tab" aria-selected="false" data-tab="smart">Smart Weeks</button>
+        <button class="rw-tab" role="tab" aria-selected="false" data-tab="vip">VIP Weeks</button>
+      </div>
+      <div class="rw-panels">
+        <div class="rw-panel active" id="panel-lastminute" role="tabpanel">
+          <div class="rw-panel-grid">
+            <div class="rw-panel-info">
+              <p class="rw-type">Last Minute Weeks</p>
+              <div class="rw-price"><span>$399</span><small>USD / 7 nights</small></div>
+              <h3>Spontaneous &amp; Affordable</h3>
+              <p>Book within 30 days of check-in and pay one flat rate. Over 5,000 beautiful destinations to choose from.</p>
+              <ul class="rw-list">
+                <li>Fixed $399 — any destination or size</li>
+                <li>Book within 30 days of check-in</li>
+                <li>5,000+ daily options</li>
+                <li>Fully equipped resort accommodations</li>
+              </ul>
+              <a href="#contact" class="btn-primary">Get This Deal</a>
+            </div>
+            <div class="rw-panel-visual">
+              <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=720&q=80" alt="Resort pool" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <div class="rw-panel" id="panel-smart" role="tabpanel">
+          <div class="rw-panel-grid">
+            <div class="rw-panel-info">
+              <p class="rw-type">Smart Weeks</p>
+              <div class="rw-price"><span>$499</span><small>USD / 7 nights</small></div>
+              <h3>Plan Ahead &amp; Travel Better</h3>
+              <p>Book up to six months in advance from thousands of gorgeous condos worldwide.</p>
+              <ul class="rw-list">
+                <li>Fixed $499 for all destinations</li>
+                <li>Book up to 6 months ahead</li>
+                <li>Thousands of worldwide options</li>
+                <li>High-end condos, studio to multi-bedroom</li>
+              </ul>
+              <a href="#contact" class="btn-primary">Get This Deal</a>
+            </div>
+            <div class="rw-panel-visual">
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=720&q=80" alt="Smart week resort" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <div class="rw-panel" id="panel-vip" role="tabpanel">
+          <div class="rw-panel-grid">
+            <div class="rw-panel-info">
+              <p class="rw-type">VIP Weeks</p>
+              <div class="rw-price"><span>$499–$1,249</span><small>USD / 7 nights</small></div>
+              <h3>Pure Luxury. Real Value.</h3>
+              <p>Over 100,000 premium resort options in the world's most sought-after destinations.</p>
+              <ul class="rw-list">
+                <li>100,000+ premium resort options</li>
+                <li>Top global destinations</li>
+                <li>Spacious family-sized units</li>
+                <li>Flexible pricing by luxury level</li>
+              </ul>
+              <a href="#contact" class="btn-primary">Get This Deal</a>
+            </div>
+            <div class="rw-panel-visual">
+              <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=720&q=80" alt="VIP resort week" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials-inner">
+      <p class="label">Happy Travelers</p>
+      <div class="bigquote-wrap">
+        <span class="bigquote-mark" aria-hidden="true">"</span>
+        <div class="quote-slider" id="quoteSlider">
+          <blockquote class="quote-slide active">
+            <p>It feels like having a travel insider on your side. Member-only prices, great hotels, and real people you can call. I've already shared my account with my whole family.</p>
+            <cite>— Andrea L. &nbsp;·&nbsp; Florida</cite>
+          </blockquote>
+          <blockquote class="quote-slide">
+            <p>Up to 70% savings is not an exaggeration. We compared prices before booking and the difference was massive. Marazul has completely changed how we travel.</p>
+            <cite>— Daniel &amp; Sophia K. &nbsp;·&nbsp; Arizona</cite>
+          </blockquote>
+          <blockquote class="quote-slide">
+            <p>Customer service is what sets them apart. Whenever I had a question, I got real help from a travel specialist. That's rare these days.</p>
+            <cite>— Nicole L. &nbsp;·&nbsp; Ontario</cite>
+          </blockquote>
+        </div>
+        <div class="quote-nav">
+          <button class="quote-prev" id="quotePrev" aria-label="Previous quote">←</button>
+          <span class="quote-count" id="quoteCount">1 / 3</span>
+          <button class="quote-next" id="quoteNext" aria-label="Next quote">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="wrap faq-grid">
+      <div class="faq-left">
+        <p class="label">Common Questions</p>
+        <h2 class="reveal-heading">Got<br/>questions?</h2>
+        <p>Everything you need to know before joining. Still curious? <a href="#contact">Let's talk</a>.</p>
+      </div>
+      <div class="faq-right" role="list">
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false">How long does it take to get access after joining?<span class="faq-icon" aria-hidden="true">+</span></button>
+          <div class="faq-a" role="region"><p>Your membership activates within 15 working days. You'll receive a welcome call plus an invitation to our onboarding walkthrough webinar.</p></div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false">Can I activate before receiving a welcome call?<span class="faq-icon" aria-hidden="true">+</span></button>
+          <div class="faq-a" role="region"><p>Absolutely! Call our customer service line and one of our travel consultants will activate your membership right away.</p></div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false">Which payment methods are accepted?<span class="faq-icon" aria-hidden="true">+</span></button>
+          <div class="faq-a" role="region"><p>We accept Visa, MasterCard, Discover, and American Express for all reservation bookings.</p></div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false">Can I share my membership with family?<span class="faq-icon" aria-hidden="true">+</span></button>
+          <div class="faq-a" role="region"><p>Yes! You can enroll up to 3 authorized users through the Friends &amp; Family program. Just contact customer service and we'll set it up.</p></div>
+        </div>
+        <div class="faq-item" role="listitem">
+          <button class="faq-q" aria-expanded="false">Is there 24/7 support available?<span class="faq-icon" aria-hidden="true">+</span></button>
+          <div class="faq-a" role="region"><p>Yes. Our team is available 24/7 for travel emergencies, from choosing your resort to confirming arrival details.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-full" id="cta">
+    <div class="cta-img-wrap">
+      <div class="cta-img-inner" id="ctaImg">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80" alt="Tropical beach" loading="lazy" />
+      </div>
+      <div class="cta-overlay"></div>
+    </div>
+    <div class="cta-text">
+      <p class="label label--light">Join Today</p>
+      <h2 class="reveal-heading">Pack your bags.<br/>We handle<br/>the rest.</h2>
+      <p>Up to 70% off on 1 million+ hotels, 150,000+ resort weeks, flights, cruises, and packages.</p>
+      <div class="cta-btns">
+        <a href="#contact" class="btn-primary">Contact Us Today</a>
+        <a href="https://members.vacancyrewards.com/" target="_blank" rel="noopener" class="btn-ghost">Member Login</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <img src="/assets/logo.png" alt="Marazul Group" class="contact-logo" />
+        <p class="contact-tagline">Travel &amp; Discount Membership &nbsp;·&nbsp; Cancún, Q.R.</p>
+        <div class="contact-details">
+          <div class="cdetail"><span class="cdetail-label">Location</span><span>Carr. a Punta Sam<br/>Supermanzana 86, Manzana 53</span></div>
+          <div class="cdetail"><span class="cdetail-label">Phone</span><a href="tel:+529982007066">+52 998 200 7066</a></div>
+          <div class="cdetail"><span class="cdetail-label">Email</span><a href="mailto:marazulgroup2020@gmail.com">marazulgroup2020@gmail.com</a></div>
+          <div class="cdetail"><span class="cdetail-label">Member Portal</span><a href="https://members.vacancyrewards.com/" target="_blank" rel="noopener">members.vacancyrewards.com →</a></div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <h3>Send a message</h3>
+        <div class="form-row">
+          <div class="field"><label for="fname">Name</label><input type="text" id="fname" name="name" autocomplete="name" placeholder="Your full name" required /></div>
+          <div class="field"><label for="femail">Email</label><input type="email" id="femail" name="email" autocomplete="email" placeholder="you@email.com" required /></div>
+        </div>
+        <div class="field"><label for="fphone">Phone</label><input type="tel" id="fphone" name="phone" autocomplete="tel" placeholder="+1 000 000 0000" /></div>
+        <div class="field"><label for="fmessage">Message</label><textarea id="fmessage" name="message" rows="4" placeholder="How can we help you?"></textarea></div>
+        <button type="submit" class="btn-submit" id="submitBtn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="/assets/logo.png" alt="Marazul Group" />
+        <p>Travel &amp; Discount Membership<br/>Powered by <a href="https://vacancyrewards.com" target="_blank" rel="noopener">Vacancy Rewards</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Membership</h4>
+        <a href="#benefits">Benefits</a>
+        <a href="#weeks">Resort Weeks</a>
+        <a href="#memberships">Plans</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:marazulgroup2020@gmail.com">marazulgroup2020@gmail.com</a>
+        <a href="tel:+529982007066">+52 998 200 7066</a>
+        <span>Carr. a Punta Sam, SM 86, Cancún</span>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="/">← Marazul Resort</a>
+        <a href="https://members.vacancyrewards.com/" target="_blank" rel="noopener">Member Login</a>
+        <a href="#contact">Get in Touch</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Marazul Group. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

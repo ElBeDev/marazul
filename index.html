@@ -44,19 +44,11 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-bg" id="heroSlides">
-      <div class="hero-slide active">
-        <img src="/assets/images/marina/marazul-marina.avif" alt="" aria-hidden="true" loading="eager" fetchpriority="high" />
-      </div>
-      <div class="hero-slide">
-        <img src="/assets/images/resort/marazul-resort.avif" alt="" aria-hidden="true" loading="lazy" />
-      </div>
-      <div class="hero-slide">
-        <img src="/assets/images/activities/vr-destinations.jpg" alt="" aria-hidden="true" loading="lazy" />
-      </div>
-      <div class="hero-slide">
-        <img src="/assets/images/membership/vr-hotel.jpg" alt="" aria-hidden="true" loading="lazy" />
-      </div>
+    <div class="hero-bg">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+        <source src="/assets/videos/videoMarazul.mp4" type="video/mp4" />
+        <img src="/assets/images/marina/marazul-marina.avif" alt="" aria-hidden="true" />
+      </video>
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
@@ -76,12 +68,6 @@
       <div class="hero-stat"><strong>Lagoon</strong><span>Cancún Waterfront</span></div>
       <div class="hero-strip-line" aria-hidden="true"></div>
       <div class="hero-stat"><strong>Resort</strong><span>Hotel &amp; Amenities</span></div>
-    </div>
-    <div class="hero-dots" id="heroDots" aria-label="Resort image carousel">
-      <button class="hero-dot active" data-slide="0" aria-label="Image 1"></button>
-      <button class="hero-dot" data-slide="1" aria-label="Image 2"></button>
-      <button class="hero-dot" data-slide="2" aria-label="Image 3"></button>
-      <button class="hero-dot" data-slide="3" aria-label="Image 4"></button>
     </div>
   </section>
 

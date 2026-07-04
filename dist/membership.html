@@ -15,37 +15,35 @@
   <header class="nav" id="nav">
     <div class="nav-inner">
       <nav class="nav-left" aria-label="Primary left">
-        <a href="/">Resort</a>
-        <a href="rooms.html">Rooms</a>
-        <a href="marina.html">Marina</a>
-        <a href="events.html">Events</a>
+        <a href="rooms.html" data-i18n="nav.rooms">Rooms</a>
+        <a href="marina.html" data-i18n="nav.marina">Marina</a>
+        <a href="activities.html" data-i18n="nav.activities">Activities</a>
       </nav>
-
       <a href="/" class="nav-logo" aria-label="Marazul home">
         <img src="/assets/logo.png" alt="Marazul Group" />
       </a>
-
       <nav class="nav-right" aria-label="Primary right">
-        <a href="membership.html" class="nav-active">Membership</a>
-        <a href="#contact">Contact</a>
-        <a href="https://members.vacancyrewards.com/" target="_blank" rel="noopener" class="nav-cta">Login →</a>
+        <a href="events.html" data-i18n="nav.events">Events</a>
+        <a href="membership.html" class="nav-active" data-i18n="nav.membership">Membership</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <div class="lang-toggle" id="langToggle" aria-label="Language">
+          <button class="lang-btn lang-btn--active" data-lang="en" aria-pressed="true">EN</button>
+          <span aria-hidden="true">|</span>
+          <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+        </div>
       </nav>
-
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span>
       </button>
     </div>
-
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <a href="/" class="m-link" data-close>Resort</a>
-      <a href="rooms.html" class="m-link" data-close>Rooms</a>
-      <a href="marina.html" class="m-link" data-close>Marina</a>
-      <a href="activities.html" class="m-link" data-close>Activities</a>
-      <a href="events.html" class="m-link" data-close>Events</a>
-      <a href="#benefits" class="m-link" data-close>Benefits</a>
-      <a href="#weeks" class="m-link" data-close>Resort Weeks</a>
-      <a href="#memberships" class="m-link" data-close>Plans</a>
-      <a href="#contact" class="m-link" data-close>Contact</a>
+      <a href="/" class="m-link" data-close>Home</a>
+      <a href="rooms.html" class="m-link" data-close data-i18n="nav.rooms">Rooms</a>
+      <a href="marina.html" class="m-link" data-close data-i18n="nav.marina">Marina</a>
+      <a href="activities.html" class="m-link" data-close data-i18n="nav.activities">Activities</a>
+      <a href="events.html" class="m-link" data-close data-i18n="nav.events">Events</a>
+      <a href="membership.html" class="m-link" data-close data-i18n="nav.membership">Membership</a>
+      <a href="#contact" class="m-link" data-close data-i18n="nav.contact">Contact</a>
       <div class="m-divider"></div>
       <a href="https://members.vacancyrewards.com/" target="_blank" rel="noopener" class="m-cta">Member Login →</a>
     </div>

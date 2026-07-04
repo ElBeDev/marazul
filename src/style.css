@@ -151,7 +151,10 @@ button { cursor: pointer; }
   align-items: center;
   gap: 32px;
 }
-.nav-right { justify-content: flex-end; }
+.nav-right {
+  justify-content: flex-end;
+  padding-right: 72px; /* space for the EN|ES toggle */
+}
 
 .nav-left a, .nav-right a:not(.nav-cta) {
   font-family: var(--mono);

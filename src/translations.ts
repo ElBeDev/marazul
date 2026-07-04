@@ -451,13 +451,5 @@ export const translations: Record<Lang, Record<string, string>> = {
     'mbr.pointsDesc': 'Gana puntos con cada reserva y canjéalos por descuentos en futuras vacaciones. Cada viaje te acerca a la siguiente aventura.',
     'mbr.priceDesc': 'Encuentra un precio más bajo y lo igualamos. Garantía real de que siempre obtienes la mejor tarifa disponible como socio.',
     'mbr.transDesc': 'Traslados privados y compartidos en más de 70 países. Aeropuerto, hotel, ciudad a ciudad — con soporte 24/7 en cada trayecto.',
-
-    // ── ROOMS list items (ES — same as HTML defaults)
-    'rooms.c1f1': 'Balcón privado',              'rooms.c1f2': 'Camas king o dobles',
-    'rooms.c1f3': 'Aire acondicionado · Smart TV','rooms.c1f4': 'Acceso a la piscina y amenidades',
-    'rooms.c2f1': 'Vista panorámica al mar',      'rooms.c2f2': 'Sala separada · Cama king',
-    'rooms.c2f3': 'Amenidades de baño premium',  'rooms.c2f4': 'Servicio personalizado',
-    'rooms.c3f1': 'Vista directa a la marina',   'rooms.c3f2': 'Terraza privada · Cama king',
-    'rooms.c3f3': 'Aire acondicionado · Smart TV','rooms.c3f4': 'Acceso prioritario a la marina',
   }
 }

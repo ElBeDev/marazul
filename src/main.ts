@@ -6,67 +6,7 @@ import { initI18n } from './i18n'
 gsap.registerPlugin(ScrollTrigger)
 initI18n()
 
-// ── Events photo carousel ──────────────────────────────────────────
-const evTrack    = document.getElementById('evTrack') as HTMLElement | null
-const evDotsWrap = document.getElementById('evDots')  as HTMLElement | null
-const evPrevBtn  = document.getElementById('evPrev')  as HTMLButtonElement | null
-const evNextBtn  = document.getElementById('evNext')  as HTMLButtonElement | null
-
-if (evTrack && evDotsWrap) {
-  const evSlides  = evTrack.querySelectorAll<HTMLElement>('.ev-carousel-slide')
-  const evPerView = () => window.innerWidth <= 768 ? 1 : 3
-  let evCurrent   = 0
-  let evTimer: ReturnType<typeof setInterval>
-
-  const buildDots = () => {
-    const pages = Math.ceil(evSlides.length / evPerView())
-    evDotsWrap.innerHTML = ''
-    for (let i = 0; i < pages; i++) {
-      const dot = document.createElement('button')
-      dot.className = 'ev-carousel-dot' + (i === 0 ? ' ev-carousel-dot--active' : '')
-      dot.addEventListener('click', () => evGo(i * evPerView()))
-      evDotsWrap.appendChild(dot)
-    }
-  }
-
-  const updateDots = () => {
-    const page = Math.floor(evCurrent / evPerView())
-    evDotsWrap.querySelectorAll('.ev-carousel-dot').forEach((d, i) =>
-      d.classList.toggle('ev-carousel-dot--active', i === page)
-    )
-  }
-
-  const evGo = (idx: number) => {
-    const max = evSlides.length - evPerView()
-    evCurrent = Math.max(0, Math.min(idx, max))
-    const w = (evTrack.parentElement as HTMLElement).offsetWidth / evPerView()
-    evTrack.style.transform = `translateX(-${evCurrent * w}px)`
-    updateDots()
-  }
-
-  const evNext = () => evGo(evCurrent + evPerView() >= evSlides.length ? 0 : evCurrent + evPerView())
-  const evPrev = () => evGo(evCurrent === 0 ? evSlides.length - evPerView() : evCurrent - evPerView())
-
-  const evStartTimer = () => { clearInterval(evTimer); evTimer = setInterval(evNext, 4000) }
-  const evStopTimer  = () => clearInterval(evTimer)
-
-  if (evPrevBtn) evPrevBtn.addEventListener('click', () => { evPrev(); evStartTimer() })
-  if (evNextBtn) evNextBtn.addEventListener('click', () => { evNext(); evStartTimer() })
-  evTrack.parentElement?.addEventListener('mouseenter', evStopTimer)
-  evTrack.parentElement?.addEventListener('mouseleave', evStartTimer)
-
-  let dragStart = 0
-  evTrack.addEventListener('pointerdown', e => { dragStart = e.clientX; evStopTimer() })
-  evTrack.addEventListener('pointerup',   e => {
-    const diff = dragStart - e.clientX
-    if (Math.abs(diff) > 40) diff > 0 ? evNext() : evPrev()
-    evStartTimer()
-  })
-
-  window.addEventListener('resize', () => { buildDots(); evGo(0) })
-  buildDots()
-  evStartTimer()
-}
+// ── end of main.ts ──
 
 /* ================================================================
    SMOOTH SCROLL — Lenis + GSAP ticker integration

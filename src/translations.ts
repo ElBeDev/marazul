@@ -221,7 +221,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'events.stepsCta': 'Quote your Wedding',
 
     // ── MEMBERSHIP extras (EN)
-    'mbr.subDesc': 'One membership. One platform. Access to 1M+ hotels, 200+ airlines, 5,500+ tours, 10,000+ car rental locations and resort weeks in 75+ countries — at rates not available to the public.',
+    'mbr.subDesc': 'One membership. One platform. Access to 800,000+ hotels, 200+ airlines, 5,500+ tours in 600+ destinations, 10,000+ car rental locations and resort weeks in 75+ countries — at rates not available to the public.',
     'mbr.pointsDesc': 'Earn points with every booking and redeem them for discounts on future vacations. Every trip brings you closer to the next adventure.',
     'mbr.priceDesc': 'Find a lower price and we match it. A real guarantee that you always get the best rate available as a member.',
     'mbr.transDesc': 'Private and shared transfers in 70+ countries. Airport, hotel, city-to-city — with 24/7 support on every journey.',
@@ -447,7 +447,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'events.stepsCta': 'Cotiza tu Boda',
 
     // ── MEMBERSHIP extras (ES)
-    'mbr.subDesc': 'Una membresía. Una plataforma. Acceso a más de 1 millón de hoteles, 200+ aerolíneas, 5,500+ tours, 10,000+ ubicaciones de autos y semanas de resort en 75+ países — con tarifas que no están disponibles al público.',
+    'mbr.subDesc': 'Una membresía. Una plataforma. Acceso a más de 800,000 hoteles, 200+ aerolíneas, 5,500+ tours en 600+ destinos, 10,000+ ubicaciones de autos y semanas de resort en 75+ países — con tarifas que no están disponibles al público.',
     'mbr.pointsDesc': 'Gana puntos con cada reserva y canjéalos por descuentos en futuras vacaciones. Cada viaje te acerca a la siguiente aventura.',
     'mbr.priceDesc': 'Encuentra un precio más bajo y lo igualamos. Garantía real de que siempre obtienes la mejor tarifa disponible como socio.',
     'mbr.transDesc': 'Traslados privados y compartidos en más de 70 países. Aeropuerto, hotel, ciudad a ciudad — con soporte 24/7 en cada trayecto.',

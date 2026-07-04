@@ -7,67 +7,65 @@ gsap.registerPlugin(ScrollTrigger)
 initI18n()
 
 // ── Events photo carousel ──────────────────────────────────────────
-const track    = document.getElementById('evTrack') as HTMLElement | null
-const dotsWrap = document.getElementById('evDots')  as HTMLElement | null
-const prevBtn  = document.getElementById('evPrev')  as HTMLButtonElement | null
-const nextBtn  = document.getElementById('evNext')  as HTMLButtonElement | null
+const evTrack    = document.getElementById('evTrack') as HTMLElement | null
+const evDotsWrap = document.getElementById('evDots')  as HTMLElement | null
+const evPrevBtn  = document.getElementById('evPrev')  as HTMLButtonElement | null
+const evNextBtn  = document.getElementById('evNext')  as HTMLButtonElement | null
 
-if (track && dotsWrap) {
-  const slides    = track.querySelectorAll<HTMLElement>('.ev-carousel-slide')
-  const perView   = () => window.innerWidth <= 480 ? 1 : window.innerWidth <= 768 ? 1 : 3
-  let current     = 0
-  let timer: ReturnType<typeof setInterval>
+if (evTrack && evDotsWrap) {
+  const evSlides  = evTrack.querySelectorAll<HTMLElement>('.ev-carousel-slide')
+  const evPerView = () => window.innerWidth <= 768 ? 1 : 3
+  let evCurrent   = 0
+  let evTimer: ReturnType<typeof setInterval>
 
-  // Build dots based on number of "pages"
   const buildDots = () => {
-    const pages = Math.ceil(slides.length / perView())
-    dotsWrap.innerHTML = ''
+    const pages = Math.ceil(evSlides.length / evPerView())
+    evDotsWrap.innerHTML = ''
     for (let i = 0; i < pages; i++) {
       const dot = document.createElement('button')
       dot.className = 'ev-carousel-dot' + (i === 0 ? ' ev-carousel-dot--active' : '')
-      dot.addEventListener('click', () => go(i * perView()))
-      dotsWrap.appendChild(dot)
+      dot.addEventListener('click', () => evGo(i * evPerView()))
+      evDotsWrap.appendChild(dot)
     }
   }
 
   const updateDots = () => {
-    const page = Math.floor(current / perView())
-    dotsWrap.querySelectorAll('.ev-carousel-dot').forEach((d, i) =>
+    const page = Math.floor(evCurrent / evPerView())
+    evDotsWrap.querySelectorAll('.ev-carousel-dot').forEach((d, i) =>
       d.classList.toggle('ev-carousel-dot--active', i === page)
     )
   }
 
-  const go = (idx: number) => {
-    const max = slides.length - perView()
-    current = Math.max(0, Math.min(idx, max))
-    const w = (track.parentElement as HTMLElement).offsetWidth / perView()
-    track.style.transform = `translateX(-${current * w}px)`
+  const evGo = (idx: number) => {
+    const max = evSlides.length - evPerView()
+    evCurrent = Math.max(0, Math.min(idx, max))
+    const w = (evTrack.parentElement as HTMLElement).offsetWidth / evPerView()
+    evTrack.style.transform = `translateX(-${evCurrent * w}px)`
     updateDots()
   }
 
-  const next = () => go(current + perView() >= slides.length ? 0 : current + perView())
-  const prev = () => go(current === 0 ? slides.length - perView() : current - perView())
+  const evNext = () => evGo(evCurrent + evPerView() >= evSlides.length ? 0 : evCurrent + evPerView())
+  const evPrev = () => evGo(evCurrent === 0 ? evSlides.length - evPerView() : evCurrent - evPerView())
 
-  const startTimer = () => { clearInterval(timer); timer = setInterval(next, 4000) }
-  const stopTimer  = () => clearInterval(timer)
+  const evStartTimer = () => { clearInterval(evTimer); evTimer = setInterval(evNext, 4000) }
+  const evStopTimer  = () => clearInterval(evTimer)
 
-  prevBtn?.addEventListener('click', () => { prev(); startTimer() })
-  nextBtn?.addEventListener('click', () => { next(); startTimer() })
-  track.parentElement?.addEventListener('mouseenter', stopTimer)
-  track.parentElement?.addEventListener('mouseleave', startTimer)
+  if (evPrevBtn) evPrevBtn.addEventListener('click', () => { evPrev(); evStartTimer() })
+  if (evNextBtn) evNextBtn.addEventListener('click', () => { evNext(); evStartTimer() })
+  evTrack.parentElement?.addEventListener('mouseenter', evStopTimer)
+  evTrack.parentElement?.addEventListener('mouseleave', evStartTimer)
 
-  // Touch / drag support
   let dragStart = 0
-  track.addEventListener('pointerdown', e => { dragStart = e.clientX; stopTimer() })
-  track.addEventListener('pointerup',   e => {
+  evTrack.addEventListener('pointerdown', e => { dragStart = e.clientX; evStopTimer() })
+  evTrack.addEventListener('pointerup',   e => {
     const diff = dragStart - e.clientX
-    if (Math.abs(diff) > 40) diff > 0 ? next() : prev()
-    startTimer()
+    if (Math.abs(diff) > 40) diff > 0 ? evNext() : evPrev()
+    evStartTimer()
   })
 
-  window.addEventListener('resize', () => { buildDots(); go(0) })
+  window.addEventListener('resize', () => { buildDots(); evGo(0) })
   buildDots()
-  startTimer()
+  evStartTimer()
 }
 
 /* ================================================================

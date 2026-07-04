@@ -153,7 +153,7 @@ button { cursor: pointer; }
 }
 .nav-right {
   justify-content: flex-end;
-  padding-right: 72px; /* space for the EN|ES toggle */
+  padding-right: 96px; /* space for the EN|ES toggle */
 }
 
 .nav-left a, .nav-right a:not(.nav-cta) {

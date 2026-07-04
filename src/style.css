@@ -899,7 +899,7 @@ button { cursor: pointer; }
 .mbr-deal-save {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #6ecfa0;
+  color: var(--copper-lt);
   letter-spacing: 0.04em;
 }
 .mbr-deals-note {

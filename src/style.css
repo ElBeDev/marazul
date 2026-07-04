@@ -148,7 +148,7 @@ button { cursor: pointer; }
 .nav-left, .nav-right {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
 }
 .nav-right { justify-content: flex-end; }
 
@@ -216,8 +216,7 @@ button { cursor: pointer; }
   display: flex;
   align-items: center;
   gap: 2px;
-  margin-left: 12px;
-  padding-left: 14px;
+  padding-left: 20px;
   border-left: 1px solid rgba(255,255,255,0.2);
 }
 .lang-toggle span { color: rgba(255,255,255,0.25); font-size: 0.65rem; margin: 0 1px; }

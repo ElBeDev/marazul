@@ -846,31 +846,30 @@ button { cursor: pointer; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: var(--border);
+  border: 1px solid var(--border-lt);
   border-radius: 12px;
   overflow: hidden;
   margin: 32px 0 12px;
 }
 .mbr-deal {
   padding: 28px 24px;
-  background: rgba(255,255,255,0.04);
+  background: var(--bg);
   text-align: center;
-  transition: background 0.2s;
 }
 .mbr-deal--featured {
-  background: rgba(255,255,255,0.09);
+  background: var(--bg2);
 }
 .mbr-deal-star {
   display: block;
   font-size: 0.75rem;
   letter-spacing: 0.12em;
-  color: #c9a84c;
+  color: #a07c3a;
   margin-bottom: 8px;
 }
 .mbr-deal-name {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.55);
+  color: var(--cream-dim);
   margin-bottom: 16px;
   letter-spacing: 0.02em;
 }
@@ -883,28 +882,28 @@ button { cursor: pointer; }
 }
 .mbr-deal-public {
   font-size: 1rem;
-  color: rgba(255,255,255,0.3);
+  color: var(--muted);
   text-decoration: line-through;
 }
 .mbr-deal-arrow {
-  color: rgba(255,255,255,0.2);
+  color: var(--muted);
   font-size: 0.8rem;
 }
 .mbr-deal-member {
   font-family: var(--syne);
   font-size: 1.4rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--cream);
 }
 .mbr-deal-save {
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--copper-lt);
+  color: var(--copper);
   letter-spacing: 0.04em;
 }
 .mbr-deals-note {
   font-size: 0.72rem;
-  color: rgba(255,255,255,0.25);
+  color: var(--muted);
   margin-bottom: 0;
 }
 @media (max-width: 600px) {

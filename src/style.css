@@ -211,6 +211,34 @@ button { cursor: pointer; }
   opacity: 0.85;
 }
 
+/* Lang toggle */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--cream);
+  opacity: 0.7;
+}
+.lang-toggle span { opacity: 0.4; font-size: 0.65rem; }
+.lang-btn {
+  background: none;
+  border: none;
+  padding: 2px 4px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--cream);
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+.lang-btn:hover { opacity: 0.9; }
+.lang-btn--active { opacity: 1; text-decoration: underline; text-underline-offset: 3px; }
+
 /* Hamburger */
 .hamburger {
   display: none;

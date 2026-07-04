@@ -15,29 +15,34 @@
   <header class="nav" id="nav">
     <div class="nav-inner">
       <nav class="nav-left" aria-label="Primary left">
-        <a href="rooms.html">Rooms</a>
-        <a href="marina.html">Marina</a>
-        <a href="activities.html">Activities</a>
+        <a href="rooms.html" data-i18n="nav.rooms">Rooms</a>
+        <a href="marina.html" data-i18n="nav.marina">Marina</a>
+        <a href="activities.html" data-i18n="nav.activities">Activities</a>
       </nav>
       <a href="/" class="nav-logo" aria-label="Marazul home">
         <img src="/assets/logo.png" alt="Marazul Resort &amp; Marina" />
       </a>
       <nav class="nav-right" aria-label="Primary right">
-        <a href="events.html">Events</a>
-        <a href="membership.html">Membership</a>
-        <a href="#contact">Contact</a>
+        <a href="events.html" data-i18n="nav.events">Events</a>
+        <a href="membership.html" data-i18n="nav.membership">Membership</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
+      <div class="lang-toggle" id="langToggle" aria-label="Language">
+        <button class="lang-btn lang-btn--active" data-lang="en" aria-pressed="true">EN</button>
+        <span aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+      </div>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span>
       </button>
     </div>
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <a href="rooms.html" class="m-link" data-close>Rooms</a>
-      <a href="marina.html" class="m-link" data-close>Marina</a>
-      <a href="activities.html" class="m-link" data-close>Activities</a>
-      <a href="events.html" class="m-link" data-close>Events</a>
-      <a href="membership.html" class="m-link" data-close>Membership</a>
-      <a href="#contact" class="m-link" data-close>Contact</a>
+      <a href="rooms.html" class="m-link" data-close data-i18n="nav.rooms">Rooms</a>
+      <a href="marina.html" class="m-link" data-close data-i18n="nav.marina">Marina</a>
+      <a href="activities.html" class="m-link" data-close data-i18n="nav.activities">Activities</a>
+      <a href="events.html" class="m-link" data-close data-i18n="nav.events">Events</a>
+      <a href="membership.html" class="m-link" data-close data-i18n="nav.membership">Membership</a>
+      <a href="#contact" class="m-link" data-close data-i18n="nav.contact">Contact</a>
       <div class="m-divider"></div>
       <a href="membership.html" class="m-cta">Explore Membership →</a>
     </div>
@@ -53,22 +58,22 @@
     </div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
-      <span class="hero-eyebrow">Cancún, Quintana Roo &nbsp;·&nbsp; México</span>
-      <h1 class="hero-title">Where the Sea<br/><em>Begins.</em></h1>
-      <p class="hero-sub">A boutique resort and full-service marina on the shores of Cancún — where the lagoon meets the Caribbean. Rooms with a view, boats in the water, and adventure at every tide.</p>
+      <span class="hero-eyebrow" data-i18n="home.eyebrow">Cancún, Quintana Roo &nbsp;·&nbsp; México</span>
+      <h1 class="hero-title" data-i18n="home.title">Where the Sea<br/><em>Begins.</em></h1>
+      <p class="hero-sub" data-i18n="home.sub">A boutique resort and full-service marina on the shores of Cancún — where the lagoon meets the Caribbean. Rooms with a view, boats in the water, and adventure at every tide.</p>
       <div class="hero-actions">
-        <a href="rooms.html" class="btn-primary">See the Rooms</a>
-        <a href="marina.html" class="btn-hero-ghost">Explore the Marina</a>
+        <a href="rooms.html" class="btn-primary" data-i18n="home.cta1">See the Rooms</a>
+        <a href="marina.html" class="btn-hero-ghost" data-i18n="home.cta2">Explore the Marina</a>
       </div>
     </div>
     <div class="hero-strip">
-      <div class="hero-stat"><strong>Marina</strong><span>Certified SEFA</span></div>
+      <div class="hero-stat"><strong data-i18n="home.s1v">Marina</strong><span data-i18n="home.s1l">Certified SEFA</span></div>
       <div class="hero-strip-line" aria-hidden="true"></div>
-      <div class="hero-stat"><strong>Kayaks</strong><span>Catamarans &amp; Boats</span></div>
+      <div class="hero-stat"><strong data-i18n="home.s2v">Kayaks</strong><span data-i18n="home.s2l">Catamarans &amp; Boats</span></div>
       <div class="hero-strip-line" aria-hidden="true"></div>
-      <div class="hero-stat"><strong>Lagoon</strong><span>Cancún Waterfront</span></div>
+      <div class="hero-stat"><strong data-i18n="home.s3v">Lagoon</strong><span data-i18n="home.s3l">Cancún Waterfront</span></div>
       <div class="hero-strip-line" aria-hidden="true"></div>
-      <div class="hero-stat"><strong>Resort</strong><span>Hotel &amp; Amenities</span></div>
+      <div class="hero-stat"><strong data-i18n="home.s4v">Resort</strong><span data-i18n="home.s4l">Hotel &amp; Amenities</span></div>
     </div>
   </section>
 
@@ -81,8 +86,8 @@
       <div class="pnav-overlay"></div>
       <div class="pnav-text">
         <span class="pnav-num">01</span>
-        <h3>Rooms &amp; Suites</h3>
-        <p>Waterfront accommodations with lagoon &amp; sea views</p>
+        <h3 data-i18n="home.pnav1h">Rooms &amp; Suites</h3>
+        <p data-i18n="home.pnav1p">Waterfront accommodations with lagoon &amp; sea views</p>
         <span class="pnav-arrow">Explore →</span>
       </div>
     </a>
@@ -93,8 +98,8 @@
       <div class="pnav-overlay"></div>
       <div class="pnav-text">
         <span class="pnav-num">02</span>
-        <h3>Marina SEFA</h3>
-        <p>Certified launch ramp, storage &amp; full boat services</p>
+        <h3 data-i18n="home.pnav2h">Marina SEFA</h3>
+        <p data-i18n="home.pnav2p">Certified launch ramp, storage &amp; full boat services</p>
         <span class="pnav-arrow">Explore →</span>
       </div>
     </a>
@@ -105,8 +110,8 @@
       <div class="pnav-overlay"></div>
       <div class="pnav-text">
         <span class="pnav-num">03</span>
-        <h3>Activities</h3>
-        <p>Kayaks, catamarans, fishing, snorkeling &amp; more</p>
+        <h3 data-i18n="home.pnav3h">Activities</h3>
+        <p data-i18n="home.pnav3p">Kayaks, catamarans, fishing, snorkeling &amp; more</p>
         <span class="pnav-arrow">Explore →</span>
       </div>
     </a>
@@ -117,8 +122,8 @@
       <div class="pnav-overlay"></div>
       <div class="pnav-text">
         <span class="pnav-num">04</span>
-        <h3>Membership</h3>
-        <p>Travel the world at up to 70% off — 70+ countries</p>
+        <h3 data-i18n="home.pnav4h">Membership</h3>
+        <p data-i18n="home.pnav4p">Travel the world at up to 70% off — 70+ countries</p>
         <span class="pnav-arrow">Explore →</span>
       </div>
     </a>
@@ -128,11 +133,11 @@
   <section class="resort-about" id="about">
     <div class="wrap about-grid">
       <div class="about-text">
-        <p class="label">Marazul Resort &amp; Marina</p>
-        <h2 class="reveal-heading">More than<br/>a resort.</h2>
-        <p>Nestled on the shores of Cancún's lagoon in Supermanzana 86 — Marazul is a private retreat where land and sea converge. Whether you're here to unwind in a waterfront room, launch your boat from our marina, or set out on a catamaran at sunrise, every detail is designed around the water.</p>
-        <p>Couples, families, and adventure seekers all find their place here. This is Cancún as it should be experienced — unhurried, authentic, and always close to the sea.</p>
-        <a href="#contact" class="btn-primary">Plan Your Stay</a>
+        <p class="label" data-i18n="home.aboutLabel">Marazul Resort &amp; Marina</p>
+        <h2 class="reveal-heading" data-i18n="home.aboutTitle">More than<br/>a resort.</h2>
+        <p data-i18n="home.aboutP1">Nestled on the shores of Cancún's lagoon in Supermanzana 86 — Marazul is a private retreat where land and sea converge. Whether you're here to unwind in a waterfront room, launch your boat from our marina, or set out on a catamaran at sunrise, every detail is designed around the water.</p>
+        <p data-i18n="home.aboutP2">Couples, families, and adventure seekers all find their place here. This is Cancún as it should be experienced — unhurried, authentic, and always close to the sea.</p>
+        <a href="#contact" class="btn-primary" data-i18n="home.aboutCta">Plan Your Stay</a>
       </div>
       <div class="about-visual">
         <img src="https://static.wixstatic.com/media/6485a9_0a5c9381b93c4d46aa85710b0c04dde0~mv2.png/v1/fill/w_900,h_700,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/image.png" alt="Marazul Resort Cancún" loading="lazy" />
@@ -143,8 +148,8 @@
   <!-- GALLERY -->
   <section class="gallery" id="gallery">
     <div class="gallery-hd wrap">
-      <p class="label">Lifestyle Gallery</p>
-      <h2 class="reveal-heading">Life at<br/>Marazul.</h2>
+      <p class="label" data-i18n="home.galLabel">Lifestyle Gallery</p>
+      <h2 class="reveal-heading" data-i18n="home.galTitle">Life at<br/>Marazul.</h2>
     </div>
     <div class="gallery-grid">
       <div class="gallery-item gallery-item--tall">
@@ -170,7 +175,7 @@
     <div class="wrap contact-grid">
       <div class="contact-info">
         <img src="/assets/logo.png" alt="Marazul Group" class="contact-logo" />
-        <p class="contact-tagline">Resort &amp; Marina &nbsp;·&nbsp; Cancún, Q.R.</p>
+        <p class="contact-tagline" data-i18n="home.ctaTagline">Resort &amp; Marina &nbsp;·&nbsp; Cancún, Q.R.</p>
         <div class="contact-details">
           <div class="cdetail"><span class="cdetail-label">Location</span><span>Carr. a Punta Sam<br/>Supermanzana 86, Manzana 53<br/>Cancún, Quintana Roo</span></div>
           <div class="cdetail"><span class="cdetail-label">Phone</span><a href="tel:+529982007066">+52 998 200 7066</a></div>
@@ -178,7 +183,7 @@
         </div>
       </div>
       <form class="contact-form" id="contactForm" novalidate>
-        <h3>Send a message</h3>
+        <h3 data-i18n="home.formTitle">Send a message</h3>
         <div class="form-row">
           <div class="field"><label for="fname">Name</label><input type="text" id="fname" name="name" autocomplete="name" placeholder="Your full name" required /></div>
           <div class="field"><label for="femail">Email</label><input type="email" id="femail" name="email" autocomplete="email" placeholder="you@email.com" required /></div>
@@ -199,22 +204,22 @@
       </div>
       <div class="footer-col">
         <h4>Resort</h4>
-        <a href="rooms.html">Rooms &amp; Suites</a>
-        <a href="marina.html">Marina SEFA</a>
-        <a href="activities.html">Activities</a>
+        <a href="rooms.html"data-i18n="footer.rooms">Rooms &amp; Suites</a>
+        <a href="marina.html"data-i18n="footer.marina">Marina SEFA</a>
+        <a href="activities.html" data-i18n="nav.activities">Activities</a>
         <a href="#gallery">Gallery</a>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4 data-i18n="footer.contact">Contact</h4>
         <a href="mailto:marazulgroup2020@gmail.com">marazulgroup2020@gmail.com</a>
         <a href="tel:+529982007066">+52 998 200 7066</a>
         <span>Carr. a Punta Sam, SM 86, Cancún</span>
       </div>
       <div class="footer-col">
-        <h4>Quick Links</h4>
-        <a href="membership.html">Travel Membership</a>
-        <a href="https://members.vacancyrewards.com/" target="_blank" rel="noopener">Member Login</a>
-        <a href="#contact">Get in Touch</a>
+        <h4 data-i18n="footer.quicklinks">Quick Links</h4>
+        <a href="membership.html"data-i18n="footer.travel">Travel Membership</a>
+        <a href="https://members.vacancyrewards.com/" target="_blank" rel="noopener"data-i18n="footer.login">Member Login</a>
+        <a href="#contact"data-i18n="footer.touch">Get in Touch</a>
       </div>
     </div>
     <div class="footer-bottom">

@@ -1,8 +1,10 @@
 import Lenis from 'lenis'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { initI18n } from './i18n'
 
 gsap.registerPlugin(ScrollTrigger)
+initI18n()
 
 /* ================================================================
    SMOOTH SCROLL — Lenis + GSAP ticker integration

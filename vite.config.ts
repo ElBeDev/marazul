@@ -11,6 +11,7 @@ export default defineConfig({
         rooms:       resolve(__dirname, 'rooms.html'),
         marina:      resolve(__dirname, 'marina.html'),
         activities:  resolve(__dirname, 'activities.html'),
+        events:      resolve(__dirname, 'events.html'),
         membership:  resolve(__dirname, 'membership.html'),
       },
     },

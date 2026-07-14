@@ -1580,6 +1580,48 @@ button { cursor: pointer; }
   color: rgba(249,247,243,0.2);
 }
 
+/* 7th card spans full row in 3-col grid */
+.exp-card--wide {
+  grid-column: 1 / -1;
+  flex-direction: row;
+}
+.exp-card--wide .exp-img {
+  flex: 0 0 40%;
+  aspect-ratio: auto;
+  height: 320px;
+}
+.exp-card--wide .exp-body {
+  justify-content: center;
+}
+
+/* Caribbean experiences — pill list */
+.caribe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+.caribe-item {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--cream);
+  background: var(--surface);
+  border: 1px solid var(--border-lt);
+  border-radius: 100px;
+  padding: 10px 20px;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, border-color 0.2s;
+}
+.caribe-item:hover {
+  background: var(--surface2);
+  border-color: var(--copper);
+}
+
+/* Tinted variant for alternating about sections */
+.resort-about--tinted {
+  background: var(--surface);
+}
+
 /* ================================================================
    EXPERIENCES — 3 category cards
    ================================================================ */

@@ -1584,14 +1584,16 @@ button { cursor: pointer; }
 .exp-card--wide {
   grid-column: 1 / -1;
   flex-direction: row;
+  align-items: stretch;
 }
 .exp-card--wide .exp-img {
   flex: 0 0 40%;
   aspect-ratio: auto;
-  height: 320px;
+  min-height: 240px;
 }
 .exp-card--wide .exp-body {
   justify-content: center;
+  padding: 40px 48px;
 }
 
 /* Caribbean experiences — pill list */
@@ -1602,19 +1604,46 @@ button { cursor: pointer; }
   margin-top: 8px;
 }
 .caribe-item {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  color: var(--cream);
-  background: var(--surface);
-  border: 1px solid var(--border-lt);
+  color: #fff;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
   border-radius: 100px;
-  padding: 10px 20px;
-  letter-spacing: 0.02em;
+  padding: 10px 22px;
+  letter-spacing: 0.03em;
   transition: background 0.2s, border-color 0.2s;
+  backdrop-filter: blur(4px);
 }
 .caribe-item:hover {
-  background: var(--surface2);
-  border-color: var(--copper);
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.5);
+}
+
+/* Dark photo background for Caribbean section */
+#caribbean {
+  position: relative;
+  background: url('/assets/images/gallery/marazul9.jpeg') center/cover no-repeat;
+  padding: var(--section) 0;
+}
+#caribbean::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10,24,38,0.72);
+  z-index: 0;
+}
+#caribbean .wrap {
+  position: relative;
+  z-index: 1;
+}
+#caribbean .benefits-header .label,
+#caribbean .benefits-header h2,
+#caribbean .benefits-header .benefits-sub {
+  color: #fff;
+}
+#caribbean .benefits-header h2 {
+  color: #fff;
 }
 
 /* Tinted variant for alternating about sections */

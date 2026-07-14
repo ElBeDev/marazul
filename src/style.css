@@ -1580,22 +1580,6 @@ button { cursor: pointer; }
   color: rgba(249,247,243,0.2);
 }
 
-/* 7th card spans full row in 3-col grid */
-.exp-card--wide {
-  grid-column: 1 / -1;
-  flex-direction: row;
-  align-items: stretch;
-}
-.exp-card--wide .exp-img {
-  flex: 0 0 40%;
-  aspect-ratio: auto;
-  min-height: 240px;
-}
-.exp-card--wide .exp-body {
-  justify-content: center;
-  padding: 40px 48px;
-}
-
 /* Caribbean experiences — pill list */
 .caribe-list {
   display: flex;
@@ -1669,8 +1653,19 @@ button { cursor: pointer; }
 }
 .exp-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+}
+/* Last 3 cards in row 2 span wider to fill the row evenly */
+.exp-card:nth-child(5),
+.exp-card:nth-child(6),
+.exp-card:nth-child(7) {
+  grid-column: span 1;
+}
+/* Remove the wide-card class since we now use 4-col grid */
+.exp-card--wide {
+  grid-column: span 1;
+  flex-direction: column;
 }
 .exp-card {
   overflow: hidden;

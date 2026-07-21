@@ -194,6 +194,26 @@ heroImgInners.forEach((el) => {
 })
 
 /* ================================================================
+   IMMERSIVE GALLERY — Ken Burns slow zoom per cell
+   ================================================================ */
+document.querySelectorAll<HTMLElement>('.immersive-cell img').forEach((img) => {
+  gsap.fromTo(
+    img,
+    { scale: 1.08 },
+    {
+      scale: 1.0,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: img.closest('.immersive-cell') as HTMLElement,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 2,
+      },
+    }
+  )
+})
+
+/* ================================================================
    SECTION HEADING REVEALS — word split + clip-path
    ================================================================ */
 document.querySelectorAll<HTMLElement>('.reveal-heading').forEach((el) => {

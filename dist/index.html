@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
-  <script type="module" crossorigin src="/assets/main-CpaYsPvJ.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-BTiTS5eY.css">
+  <script type="module" crossorigin src="/assets/main-CX0lmwHS.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-CvpTRfDC.css">
 </head>
 <body>
 
@@ -26,7 +26,7 @@
       <nav class="nav-right" aria-label="Primary right">
         <a href="events.html" data-i18n="nav.events">Events</a>
         <a href="membership.html" data-i18n="nav.membership">Membership</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
         <div class="lang-toggle" id="langToggle" aria-label="Language">
           <button class="lang-btn lang-btn--active" data-lang="en" aria-pressed="true">EN</button>
           <span aria-hidden="true">|</span>
@@ -43,10 +43,10 @@
       <a href="activities.html" class="m-link" data-close data-i18n="nav.activities">Activities</a>
       <a href="events.html" class="m-link" data-close data-i18n="nav.events">Events</a>
       <a href="membership.html" class="m-link" data-close data-i18n="nav.membership">Membership</a>
-      <a href="#contact" class="m-link" data-close data-i18n="nav.contact">Contact</a>
+      <a href="contact.html" class="m-link" data-close data-i18n="nav.contact">Contact</a>
       <div class="m-divider"></div>
       <a href="membership.html" class="m-cta">Explore Membership →</a>
-    </div>
+      </div>
   </header>
 
   <!-- HERO -->
@@ -67,15 +67,24 @@
         <a href="#place" class="btn-hero-ghost" data-i18n="home.cta2">Discover MARAZUL</a>
       </div>
     </div>
-    <div class="hero-strip">
-      <div class="hero-stat"><strong data-i18n="home.s1v">Sea</strong><span data-i18n="home.s1l">Shaped by the sea</span></div>
-      <div class="hero-strip-line" aria-hidden="true"></div>
-      <div class="hero-stat"><strong data-i18n="home.s2v">Nature</strong><span data-i18n="home.s2l">Rooted in nature</span></div>
-      <div class="hero-strip-line" aria-hidden="true"></div>
-      <div class="hero-stat"><strong data-i18n="home.s3v">MARAZUL</strong><span data-i18n="home.s3l">More than a vacation</span></div>
-      <div class="hero-strip-line" aria-hidden="true"></div>
-      <div class="hero-stat"><strong data-i18n="home.s4v">Future</strong><span data-i18n="home.s4l">Designed to evolve</span></div>
+  </section>
+
+  <!-- IMMERSIVE GALLERY — full-bleed, atmospheric, no text overlay -->
+  <section class="immersive" id="immersive" aria-label="MARAZUL · Cancún">
+    <div class="immersive-grid">
+      <div class="immersive-cell immersive-cell--main">
+        <img src="/assets/images/gallery/marazul9.jpeg" alt="" loading="eager" fetchpriority="high" />
+      </div>
+      <div class="immersive-col">
+        <div class="immersive-cell immersive-cell--top">
+          <img src="/assets/images/marina/marazul-marina.avif" alt="" loading="lazy" />
+        </div>
+        <div class="immersive-cell immersive-cell--bottom">
+          <img src="/assets/images/gallery/marazul15.jpeg" alt="" loading="lazy" />
+        </div>
+      </div>
     </div>
+    <span class="immersive-caption" aria-hidden="true">Cancún · Quintana Roo</span>
   </section>
 
   <section class="marquee-band" aria-label="Video headline">
@@ -122,7 +131,7 @@
             <h3 data-i18n="home.life1h">Resort</h3>
             <p data-i18n="home.life1p">Contemporary suites and apartments designed for extended stays by the Caribbean.</p>
             <a href="rooms.html" class="room-cta" data-i18n="home.life1cta">Explore Rooms →</a>
-          </div>
+      </div>
         </article>
         <article class="activity-card">
           <div class="activity-img">
@@ -132,7 +141,7 @@
             <h3 data-i18n="home.life2h">Marina</h3>
             <p data-i18n="home.life2p">A full-service marina designed for larger vessels and life on the water.</p>
             <a href="marina.html" class="room-cta" data-i18n="home.life2cta">Explore Marina →</a>
-          </div>
+      </div>
         </article>
         <article class="activity-card">
           <div class="activity-img">
@@ -160,7 +169,7 @@
             <h3 data-i18n="home.life5h">Experiences</h3>
             <p data-i18n="home.life5p">Experiences shaped by the Caribbean.</p>
             <a href="activities.html" class="room-cta" data-i18n="home.life5cta">See Activities →</a>
-          </div>
+      </div>
         </article>
         <article class="activity-card">
           <div class="activity-img">
@@ -170,7 +179,7 @@
             <h3 data-i18n="home.life6h">Events</h3>
             <p data-i18n="home.life6p">Oceanfront spaces designed for celebrations that deserve an extraordinary setting.</p>
             <a href="events.html" class="room-cta" data-i18n="home.life6cta">See Events →</a>
-          </div>
+      </div>
         </article>
         <article class="activity-card">
           <div class="activity-img">
@@ -274,17 +283,10 @@
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <div class="wrap contact-grid">
-      <div class="contact-info">
-        <img src="/assets/logo.png" alt="Marazul Group" class="contact-logo" />
-        <p class="contact-tagline" data-i18n="home.ctaTagline">Resort &amp; Marina &nbsp;·&nbsp; Cancún, Q.R.</p>
-        <div class="contact-details">
-          <div class="cdetail"><span class="cdetail-label">Location</span><span>Carr. a Punta Sam<br/>Supermanzana 86, Manzana 53<br/>Cancún, Quintana Roo</span></div>
-          <div class="cdetail"><span class="cdetail-label">Phone</span><a href="tel:+529982007066">+52 998 200 7066</a></div>
-          <div class="cdetail"><span class="cdetail-label">Email</span><a href="mailto:marazulgroup2020@gmail.com">marazulgroup2020@gmail.com</a></div>
-        </div>
-      </div>
+    <div class="wrap contact-grid contact-grid--formonly">
       <form class="contact-form" id="contactForm" novalidate>
+        <a href="https://wa.link/t655ge" target="_blank" rel="noopener" class="contact-wa" data-i18n="contact.whatsapp">Contact via WhatsApp</a>
+        <p class="contact-wa-note" data-i18n="contact.whatsappNote">Fast response from our team.</p>
         <h3 data-i18n="home.formTitle">Send a message</h3>
         <div class="form-row">
           <div class="field"><label for="fname">Name</label><input type="text" id="fname" name="name" autocomplete="name" placeholder="Your full name" required /></div>
@@ -303,6 +305,7 @@
       <div class="footer-brand">
         <img src="/assets/logo.png" alt="Marazul Group" />
         <p>Resort &amp; Marina<br/>Cancún, Quintana Roo · México</p>
+        <p class="footer-address-main">Carretera a Punta Sam, Supermanzana 86, Manzana 53<br/>Cancún, Quintana Roo, México</p>
       </div>
       <div class="footer-col">
         <h4>Resort</h4>
@@ -315,13 +318,12 @@
         <h4 data-i18n="footer.contact">Contact</h4>
         <a href="mailto:marazulgroup2020@gmail.com">marazulgroup2020@gmail.com</a>
         <a href="tel:+529982007066">+52 998 200 7066</a>
-        <span>Carr. a Punta Sam, SM 86, Cancún</span>
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer.quicklinks">Quick Links</h4>
         <a href="membership.html" data-i18n="footer.travel">Travel Membership</a>
         <a href="https://login.marazulresortyachtclub.com/" target="_blank" rel="noopener" data-i18n="footer.login">Member Login</a>
-        <a href="#contact" data-i18n="footer.touch">Get in Touch</a>
+        <a href="contact.html" data-i18n="footer.touch">Get in Touch</a>
       </div>
     </div>
     <div class="footer-bottom">

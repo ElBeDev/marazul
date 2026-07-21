@@ -101,6 +101,7 @@ function splitWords(el: HTMLElement): HTMLElement[] {
    HERO ANIMATION — entrance timeline
    ================================================================ */
 const heroTitle = document.querySelector<HTMLElement>('.hero-title')
+const heroStrip = document.querySelector<HTMLElement>('.hero-strip')
 
 if (heroTitle) {
   const words = splitWords(heroTitle)
@@ -133,18 +134,20 @@ if (heroTitle) {
       duration: 0.6,
       ease: 'power3.out',
     }, 0.55)
-    .to('.hero-strip', {
+  if (heroStrip) {
+    tl.to(heroStrip, {
       opacity: 1,
       y: 0,
       duration: 0.8,
       ease: 'power3.out',
     }, 0.65)
+  }
 
   // Initial states for non-title elements
   gsap.set('.hero-eyebrow',  { opacity: 0 })
   gsap.set('.hero-sub',      { opacity: 0, y: 20 })
   gsap.set('.hero-actions',  { opacity: 0, y: 20 })
-  gsap.set('.hero-strip',    { opacity: 0, y: 16 })
+  if (heroStrip) gsap.set(heroStrip, { opacity: 0, y: 16 })
 }
 
 /* ================================================================
@@ -251,26 +254,30 @@ document.querySelectorAll<HTMLElement>('.label').forEach((el) => {
 /* ================================================================
    BENEFITS — staggered slide-in from left
    ================================================================ */
-gsap.from('.benefit-card', {
-  opacity: 0,
-  y: 32,
-  duration: 0.7,
-  ease: 'power3.out',
-  stagger: 0.08,
-  scrollTrigger: {
-    trigger: '.benefits-list',
-    start: 'top 82%',
-    once: true,
-  },
-})
+if (document.querySelector('.benefits-list')) {
+  gsap.from('.benefit-card', {
+    opacity: 0,
+    y: 32,
+    duration: 0.7,
+    ease: 'power3.out',
+    stagger: 0.08,
+    scrollTrigger: {
+      trigger: '.benefits-list',
+      start: 'top 82%',
+      once: true,
+    },
+  })
+}
 
-gsap.from('.benefits-sub', {
-  opacity: 0,
-  y: 20,
-  duration: 0.7,
-  ease: 'power2.out',
-  scrollTrigger: { trigger: '.benefits-sub', start: 'top 88%', once: true },
-})
+if (document.querySelector('.benefits-sub')) {
+  gsap.from('.benefits-sub', {
+    opacity: 0,
+    y: 20,
+    duration: 0.7,
+    ease: 'power2.out',
+    scrollTrigger: { trigger: '.benefits-sub', start: 'top 88%', once: true },
+  })
+}
 
 /* ================================================================
    STATS — count-up animation
@@ -306,18 +313,20 @@ document.querySelectorAll<HTMLElement>('.count-num').forEach((el) => {
 /* ================================================================
    HOW IT WORKS — stagger steps
    ================================================================ */
-gsap.from('.hiw-step', {
-  opacity: 0,
-  y: 40,
-  duration: 0.8,
-  ease: 'power3.out',
-  stagger: 0.15,
-  scrollTrigger: {
-    trigger: '.hiw-steps',
-    start: 'top 80%',
-    once: true,
-  },
-})
+if (document.querySelector('.hiw-steps')) {
+  gsap.from('.hiw-step', {
+    opacity: 0,
+    y: 40,
+    duration: 0.8,
+    ease: 'power3.out',
+    stagger: 0.15,
+    scrollTrigger: {
+      trigger: '.hiw-steps',
+      start: 'top 80%',
+      once: true,
+    },
+  })
+}
 
 /* ================================================================
    RESORT WEEKS — tab switching with GSAP crossfade
@@ -374,55 +383,60 @@ tabs.forEach((tab) => {
    TESTIMONIAL CAROUSEL — auto-advance with GSAP crossfade
    ================================================================ */
 const slides       = document.querySelectorAll<HTMLElement>('.quote-slide')
-const countDisplay = document.getElementById('quoteCount') as HTMLElement
-const prevBtn      = document.getElementById('quotePrev')  as HTMLButtonElement
-const nextBtn      = document.getElementById('quoteNext')  as HTMLButtonElement
+const countDisplay = document.getElementById('quoteCount')
+const prevBtn      = document.getElementById('quotePrev')
+const nextBtn      = document.getElementById('quoteNext')
 
-let current   = 0
-let autoTimer: ReturnType<typeof setInterval> | null = null
+if (slides.length > 0 && countDisplay && prevBtn && nextBtn) {
+  const countDisplayEl = countDisplay as HTMLElement
+  const prevBtnEl = prevBtn as HTMLButtonElement
+  const nextBtnEl = nextBtn as HTMLButtonElement
+  let current   = 0
+  let autoTimer: ReturnType<typeof setInterval> | null = null
 
-function goToSlide(next: number, dir: 1 | -1 = 1): void {
-  const from = slides[current]
-  current = (next + slides.length) % slides.length
-  const to   = slides[current]
+  function goToSlide(next: number, dir: 1 | -1 = 1): void {
+    const from = slides[current]
+    current = (next + slides.length) % slides.length
+    const to   = slides[current]
 
-  if (!from || !to || from === to) return
+    if (!from || !to || from === to) return
 
-  gsap.to(from, {
-    opacity: 0,
-    y: dir * -20,
-    duration: 0.35,
-    ease: 'power2.in',
-    onComplete: () => {
-      from.classList.remove('active')
-      to.classList.add('active')
-      gsap.fromTo(to,
-        { opacity: 0, y: dir * 20 },
-        { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }
-      )
-      countDisplay.textContent = `${current + 1} / ${slides.length}`
-    },
+    gsap.to(from, {
+      opacity: 0,
+      y: dir * -20,
+      duration: 0.35,
+      ease: 'power2.in',
+      onComplete: () => {
+        from.classList.remove('active')
+        to.classList.add('active')
+        gsap.fromTo(to,
+          { opacity: 0, y: dir * 20 },
+          { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }
+        )
+        countDisplayEl.textContent = `${current + 1} / ${slides.length}`
+      },
+    })
+  }
+
+  function startAuto(): void {
+    autoTimer = setInterval(() => goToSlide(current + 1, 1), 5000)
+  }
+  function resetAuto(): void {
+    if (autoTimer) clearInterval(autoTimer)
+    startAuto()
+  }
+
+  prevBtnEl.addEventListener('click', () => { goToSlide(current - 1, -1); resetAuto() })
+  nextBtnEl.addEventListener('click', () => { goToSlide(current + 1,  1); resetAuto() })
+
+  // Keyboard support
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft')  { goToSlide(current - 1, -1); resetAuto() }
+    if (e.key === 'ArrowRight') { goToSlide(current + 1,  1); resetAuto() }
   })
-}
 
-function startAuto(): void {
-  autoTimer = setInterval(() => goToSlide(current + 1, 1), 5000)
-}
-function resetAuto(): void {
-  if (autoTimer) clearInterval(autoTimer)
   startAuto()
 }
-
-prevBtn.addEventListener('click', () => { goToSlide(current - 1, -1); resetAuto() })
-nextBtn.addEventListener('click', () => { goToSlide(current + 1,  1); resetAuto() })
-
-// Keyboard support
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowLeft')  { goToSlide(current - 1, -1); resetAuto() }
-  if (e.key === 'ArrowRight') { goToSlide(current + 1,  1); resetAuto() }
-})
-
-startAuto()
 
 /* ================================================================
    CTA — parallax image
@@ -444,18 +458,20 @@ if (ctaImg) {
 /* ================================================================
    CTA TEXT — reveal
    ================================================================ */
-gsap.from('.cta-text p, .cta-btns', {
-  opacity: 0,
-  y: 24,
-  duration: 0.8,
-  ease: 'power3.out',
-  stagger: 0.12,
-  scrollTrigger: {
-    trigger: '.cta-text',
-    start: 'top 80%',
-    once: true,
-  },
-})
+if (document.querySelector('.cta-text')) {
+  gsap.from('.cta-text p, .cta-btns', {
+    opacity: 0,
+    y: 24,
+    duration: 0.8,
+    ease: 'power3.out',
+    stagger: 0.12,
+    scrollTrigger: {
+      trigger: '.cta-text',
+      start: 'top 80%',
+      once: true,
+    },
+  })
+}
 
 /* ================================================================
    FAQ — accordion
@@ -482,28 +498,30 @@ document.querySelectorAll<HTMLButtonElement>('.faq-q').forEach((btn) => {
 /* ================================================================
    CONTACT FORM — feedback on submit
    ================================================================ */
-const contactForm = document.getElementById('contactForm') as HTMLFormElement
-const submitBtn   = document.getElementById('submitBtn')   as HTMLButtonElement
+const contactForm = document.getElementById('contactForm') as HTMLFormElement | null
+const submitBtn   = document.getElementById('submitBtn')   as HTMLButtonElement | null
 
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault()
+if (contactForm && submitBtn) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault()
 
-  submitBtn.textContent = 'Sent ✓'
-  submitBtn.disabled = true
+    submitBtn.textContent = 'Sent ✓'
+    submitBtn.disabled = true
 
-  gsap.to(submitBtn, {
-    backgroundColor: '#2d7a4f',
-    duration: 0.4,
-    ease: 'power2.out',
+    gsap.to(submitBtn, {
+      backgroundColor: '#2d7a4f',
+      duration: 0.4,
+      ease: 'power2.out',
+    })
+
+    setTimeout(() => {
+      submitBtn.textContent = 'Send Message'
+      submitBtn.disabled = false
+      gsap.to(submitBtn, { backgroundColor: '', duration: 0.4 })
+      contactForm.reset()
+    }, 4000)
   })
-
-  setTimeout(() => {
-    submitBtn.textContent = 'Send Message'
-    submitBtn.disabled = false
-    gsap.to(submitBtn, { backgroundColor: '', duration: 0.4 })
-    contactForm.reset()
-  }, 4000)
-})
+}
 
 /* ================================================================
    GENERIC FADE-UP on scroll (contact details, footer, etc.)

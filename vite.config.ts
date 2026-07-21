@@ -13,6 +13,7 @@ export default defineConfig({
         activities:  resolve(__dirname, 'activities.html'),
         events:      resolve(__dirname, 'events.html'),
         membership:  resolve(__dirname, 'membership.html'),
+        contact:     resolve(__dirname, 'contact.html'),
       },
     },
   },
